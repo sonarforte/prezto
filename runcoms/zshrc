@@ -14,3 +14,82 @@ fi
 #
 export EDITOR="vim"
 export VISUAL="vim"
+
+# User configuration
+
+# Setting PATH for Python 3.4
+# The orginal version is saved in .profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
+
+# Setting PATH for Python 2.7
+# The orginal version is saved in .profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+
+
+# Set PATH for user-created scripts
+PATH="/Users/steven/bin:${PATH}"
+
+# Set PATH for brew coreutils
+PATH="/usr/local/opt/coreutils/libexec/gnubin:${PATH}"
+
+export PATH
+
+# Set colors
+#export CLICOLOR=1
+#export LSCOLORS=GxFxCxDxCxcgedabagaced
+# Below uses a different code
+# 1 means bold
+#export LS_COLORS='di=1;96:fi=0:ln=1;95:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=92:*.rpm=90'
+
+
+MANPATH="/usr/local/man:${MANPATH}"
+
+# Set Manpath for gnu coreutils
+MANPATH="/usr/local/opt/coreutils/libexec/gnuman:${MANPATH}"
+export MANPATH
+
+
+## Homebrew config
+# Link brew installed programs to /Applications
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+    export EDITOR='vim'
+else
+    export EDITOR='vim'
+fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+if [ -f ./aliases ]; then
+    source ./aliases
+fi
+
+
+# Set colors
+export CLICOLOR=1
+#export LSCOLORS=GxFxCxDxCxcgedabagaced
+
+# Brew instructions for nvm
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
+#export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD

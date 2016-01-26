@@ -1,0 +1,34 @@
+# Use GNU grep installed via homebrew
+alias grep="ggrep --color=auto"
+
+# Use gpg2 instead of gpg
+alias gpg="gpg2"
+
+# More easily edit .vimrc
+alias vimrc="vim ~/.vimrc"
+
+# mkdir creates full path
+alias mkdir="mkdir -p"
+
+# Easy shortcut to clear terminal
+alias c="clear"
+
+# Start mongodb in the background
+alias mongodbg="mongod --dbpath data/db --fork --logpath data/mongod.log"
+
+# Easily edit .aliases
+alias aliases="vim ~/.aliases"
+
+# Safe delete of files
+alias rm="rms.sh"
+
+# Force delete annoying files
+alias rmf="rm -rf"
+
+# Use brew-installed gcc MAC ONLY
+if [ `uname -a | grep -c Darwin` ]; then
+    alias gcc gcc-5
+fi
+
+#
+#
